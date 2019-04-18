@@ -1,0 +1,5 @@
+#err-number, #err-length, #err-empty, #err-format {
+	color: red;
+	display: none
+}
+

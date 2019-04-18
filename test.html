@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Random</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        
+
+        
+        <link rel="stylesheet" type="text/css" href="style2.css">
+    </head>
+    <body>
+        
+
+        <div class="col-lg-5 col-md-5">
+            <div class="container-fluid">
+                <h1>Random</h1>
+                <div id="error" class="alert alert-danger hidden">
+                    
+                </div>
+                <form action="/checkout" method="post" id="checkout-form">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label htmlfor="name">Bạn muốn chương trình tạo ra bao nhiêu dãy số?</label>
+                                <input type="number" id="number" class="form-control" required name="number" onChange="" value="" />
+                                <p id="err-number">Hãy nhập vào 1 số!</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label htmlfor="address">Độ dài của mỗi dãy số là bao nhiêu?</label>
+                                <input type="number" id="length" class="form-control" required name="length" onChange="" value="" />
+                                <p id="err-length">Hãy nhập vào 1 số từ 5 tới 18</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label htmlfor="card-name">Các dãy số có phân biệt thứ tự sắp xếp không?</label>
+                                
+                                <form>
+                                    <div class="form-group">
+                                        Có
+                                        <input id="order" class="" type="radio" name="order" checked value="1">
+
+                                        Không
+                                        <input id="order" class="" type="radio" name="order" value="0">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label htmlfor="skip">Bạn có muốn loại bỏ các số bạn không muốn có trong danh sách không?</label>
+                                <form id="form-skip">
+                                    <div className="form-group">
+                                        Có
+                                        <input class="form-check-input" type="radio" id="skip" name="skip" checked value="1" />
+
+                                        Không
+                                        <input class="form-check-input" type="radio" id="skip" name="skip" value="0" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        
+                        <div class="col-xs-12" id="skip_arr_div">
+                            <div class="form-group">
+                                <label htmlfor="card-cvc">Liệt kê các số bạn muốn loại ra</label>
+                                <input type="text" class="form-control"  id="skip_arr" name="skip_arr" onChange="" value="" />
+                                <p id="err-empty">Không được để trống trường này</p>
+                                <p id="err-format">Không đúng định dạng</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" id="button" class="btn btn-success" onClick="">Generate</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6">
+            <br />
+            <ul class="list-group">
+                
+
+            </ul>
+        </div>
+
+
+        <script src="jquery-1.12.3.js"></script>
+        <script type="text/javascript" src="helper.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        
+    
+    </body>
+</html>
